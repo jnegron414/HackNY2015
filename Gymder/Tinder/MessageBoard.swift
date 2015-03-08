@@ -12,6 +12,7 @@ var messageBoard = [String]()
 
 class MessageBoard: UIViewController, UITableViewDelegate {
     
+    var userNames = [String]()
     
     var messageBoard = [String]()
     
@@ -22,21 +23,22 @@ class MessageBoard: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     var query = PFUser.query()
         
         query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
-            
+           
             self.messageBoard.removeAll(keepCapacity: true)
          
             for object in objects {
                 
                 var user:PFUser = object as PFUser
-                
+                    
                 let latestMessage = user["latest"] as String
                 
+                println(latestMessage)
+                
                 self.messageBoard.append(latestMessage)
-                
-                
                 
             }
             
@@ -44,6 +46,7 @@ class MessageBoard: UIViewController, UITableViewDelegate {
             
         }
         
+            
     )}
     
     override func didReceiveMemoryWarning() {
@@ -78,6 +81,25 @@ class MessageBoard: UIViewController, UITableViewDelegate {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
            //using our prototype cell as the placeholder for user entry
         
+        var query = PFUser.query()
+        
+        query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            self.userNames.removeAll(keepCapacity: true)
+        
+        for object in objects {
+            
+            var user:PFUser = object as PFUser
+            
+            let usersName = user["name"] as String
+            
+            self.userNames.append(usersName)
+            
+            }
+        
+            
+            })
+            
         cell.textLabel?.text = messageBoard[indexPath.row] //the text in the "cell" is based off the item in the array for that row
         
         return cell

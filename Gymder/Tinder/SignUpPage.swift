@@ -52,8 +52,6 @@ class SignUpPage: UIViewController {
             FBRequestConnection.startForMeWithCompletionHandler({
             connection, result, error in
                 
-                user["gender"] = result["gender"]
-                
                 user["name"] = result["name"]
             
                 user.save()
