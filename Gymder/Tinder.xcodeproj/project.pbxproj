@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C405B171AABDA2B00DA73D4 /* Button-login-with-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C405B161AABDA2B00DA73D4 /* Button-login-with-facebook.png */; };
+		4CCD00141AAC4941007ACBED /* MessageBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD00131AAC4941007ACBED /* MessageBoard.swift */; };
+		4CCD00161AAC4C1D007ACBED /* AddNewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCD00151AAC4C1D007ACBED /* AddNewMessage.swift */; };
 		4CEA0E7B1AABE32B0092C7A3 /* Weight-Bar-Gym-Workout-640x1136.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA0E7A1AABE32B0092C7A3 /* Weight-Bar-Gym-Workout-640x1136.jpg */; };
 		4CEA0E7D1AABE6860092C7A3 /* ggg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CEA0E7C1AABE6860092C7A3 /* ggg.png */; };
 		4CEA0E7F1AABEC730092C7A3 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEA0E7E1AABEC730092C7A3 /* SignUpPage.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		4C405B161AABDA2B00DA73D4 /* Button-login-with-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Button-login-with-facebook.png"; path = "../../Button-login-with-facebook.png"; sourceTree = "<group>"; };
+		4CCD00131AAC4941007ACBED /* MessageBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBoard.swift; sourceTree = "<group>"; };
+		4CCD00151AAC4C1D007ACBED /* AddNewMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMessage.swift; sourceTree = "<group>"; };
 		4CEA0E7A1AABE32B0092C7A3 /* Weight-Bar-Gym-Workout-640x1136.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Weight-Bar-Gym-Workout-640x1136.jpg"; path = "../../Weight-Bar-Gym-Workout-640x1136.jpg"; sourceTree = "<group>"; };
 		4CEA0E7C1AABE6860092C7A3 /* ggg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ggg.png; path = ../../ggg.png; sourceTree = "<group>"; };
 		4CEA0E7E1AABEC730092C7A3 /* SignUpPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				C86B0D9C19B611D800F8DF49 /* ViewController.swift */,
 				4CEA0E7E1AABEC730092C7A3 /* SignUpPage.swift */,
 				C86B0D9E19B611D800F8DF49 /* Main.storyboard */,
+				4CCD00151AAC4C1D007ACBED /* AddNewMessage.swift */,
+				4CCD00131AAC4941007ACBED /* MessageBoard.swift */,
 				4CEA0E8E1AAC12870092C7A3 /* messageView.swift */,
 				C86B0DA119B611D800F8DF49 /* Images.xcassets */,
 				4C405B161AABDA2B00DA73D4 /* Button-login-with-facebook.png */,
@@ -292,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCD00161AAC4C1D007ACBED /* AddNewMessage.swift in Sources */,
 				4CEA0E8F1AAC12870092C7A3 /* messageView.swift in Sources */,
 				4CEA0E7F1AABEC730092C7A3 /* SignUpPage.swift in Sources */,
 				C86B0D9D19B611D800F8DF49 /* ViewController.swift in Sources */,
+				4CCD00141AAC4941007ACBED /* MessageBoard.swift in Sources */,
 				C86B0D9B19B611D800F8DF49 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

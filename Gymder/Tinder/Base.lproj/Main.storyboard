@@ -143,10 +143,62 @@
             </objects>
             <point key="canvasLocation" x="807" y="343"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="RNV-WE-UMv">
+            <objects>
+                <viewController id="Of4-O8-BIb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Prf-fu-Fcq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ewR-8x-YxM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xgt-eC-njW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Weight-Bar-Gym-Workout-640x1136.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VfM-JZ-k5e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.84999999999999998" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbK-Y7-wLd">
+                                <rect key="frame" x="40" y="193" width="240" height="181"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TJ-0t-Y30">
+                                <rect key="frame" x="95" y="417" width="131" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Add Message">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter your message below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-q2-aYL">
+                                <rect key="frame" x="21" y="28" width="283" height="104"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ewR-8x-YxM" firstAttribute="top" secondItem="2TJ-0t-Y30" secondAttribute="bottom" constant="76" id="P6F-cW-aGl"/>
+                            <constraint firstAttribute="centerX" secondItem="2TJ-0t-Y30" secondAttribute="centerX" id="WQD-A5-du1"/>
+                            <constraint firstItem="nTA-q2-aYL" firstAttribute="top" secondItem="Prf-fu-Fcq" secondAttribute="bottom" constant="8" id="cHP-TV-c9N"/>
+                            <constraint firstAttribute="centerX" secondItem="MbK-Y7-wLd" secondAttribute="centerX" id="d20-1Z-OM4"/>
+                            <constraint firstAttribute="centerY" secondItem="MbK-Y7-wLd" secondAttribute="centerY" id="gjA-AT-Vv1"/>
+                            <constraint firstAttribute="centerY" secondItem="2TJ-0t-Y30" secondAttribute="centerY" id="ryD-dD-yLA"/>
+                            <constraint firstAttribute="centerX" secondItem="nTA-q2-aYL" secondAttribute="centerX" id="sNk-LI-Nct"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJQ-oO-ZO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="1032"/>
+        </scene>
         <!--Title-->
         <scene sceneID="cu9-mW-04W">
             <objects>
-                <viewController id="Dc2-sd-ltY" customClass="messageView" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dc2-sd-ltY" customClass="MessageBoard" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Aj-az-uTn"/>
                         <viewControllerLayoutGuide type="bottom" id="3ep-8L-pHR"/>
@@ -161,6 +213,14 @@
                             <tableView clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ajh-Xj-XCE">
                                 <rect key="frame" x="0.0" y="72" width="320" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="DVl-53-Fmz">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DVl-53-Fmz" id="nVx-0G-1Ns">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <navigationBar alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q22-JY-JRI">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -185,11 +245,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="g.png" translatesAutoresizingMaskIntoConstraints="NO" id="F7h-Ro-Dn5">
                                 <rect key="frame" x="279" y="39" width="36" height="33"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ggg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-Da-vex">
-                                <rect key="frame" x="40" y="-8" width="240" height="128"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gg.png" translatesAutoresizingMaskIntoConstraints="NO" id="uSO-fL-10A">
                                 <rect key="frame" x="6" y="28" width="35" height="44"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXr-hW-iHA">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="add" id="Gz5-PG-lWc">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="addItem:" destination="Dc2-sd-ltY" id="TBj-qz-1r4"/>
+                                            <segue destination="Of4-O8-BIb" kind="show" id="hhV-ED-3LK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" id="9sk-GT-Ctm"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ggg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-Da-vex">
+                                <rect key="frame" x="40" y="-8" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -203,6 +276,9 @@
                     <navigationItem key="navigationItem" title="Title" id="bXH-vf-6xC"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableViewMessageBoard" destination="ajh-Xj-XCE" id="Acw-ia-0CD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z37-o3-IAx" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,6 +359,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9tz-3z-ZY2"/>
-        <segue reference="tRD-ni-eFh"/>
+        <segue reference="dgq-JX-UaD"/>
     </inferredMetricsTieBreakers>
 </document>
