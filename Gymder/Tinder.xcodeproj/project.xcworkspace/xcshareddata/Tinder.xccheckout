@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>559B082F-3F66-4FA7-8055-2247A567A091</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tinder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ADDB1B497AB37DC6C51DC7D1F33EF3A52066FDEB</key>
+		<string>https://github.com/algilardi/HackNY2015</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Gymder/Tinder.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ADDB1B497AB37DC6C51DC7D1F33EF3A52066FDEB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/algilardi/HackNY2015</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ADDB1B497AB37DC6C51DC7D1F33EF3A52066FDEB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ADDB1B497AB37DC6C51DC7D1F33EF3A52066FDEB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HackNY2015</string>
+		</dict>
+	</array>
+</dict>
+</plist>
