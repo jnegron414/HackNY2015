@@ -103,7 +103,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1b-FE-dib">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1b-FE-dib">
                                 <rect key="frame" x="110" y="525" width="100" height="30"/>
                                 <state key="normal" title="Save Changes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,6 +170,9 @@
                                 <state key="normal" title="Add Message">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Dc2-sd-ltY" kind="show" id="lWe-wg-wlU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter your message below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-q2-aYL">
                                 <rect key="frame" x="21" y="28" width="283" height="104"/>
@@ -180,13 +183,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ewR-8x-YxM" firstAttribute="top" secondItem="2TJ-0t-Y30" secondAttribute="bottom" constant="76" id="P6F-cW-aGl"/>
+                            <constraint firstItem="nTA-q2-aYL" firstAttribute="trailing" secondItem="xgt-eC-njW" secondAttribute="trailingMargin" id="6KH-PY-Etx"/>
+                            <constraint firstItem="2TJ-0t-Y30" firstAttribute="top" secondItem="MbK-Y7-wLd" secondAttribute="bottom" constant="43" id="7fx-8d-6u6"/>
+                            <constraint firstItem="nTA-q2-aYL" firstAttribute="leading" secondItem="xgt-eC-njW" secondAttribute="leadingMargin" constant="5" id="D79-Ko-LSE"/>
+                            <constraint firstItem="MbK-Y7-wLd" firstAttribute="top" secondItem="nTA-q2-aYL" secondAttribute="bottom" constant="61" id="G9A-XA-UhK"/>
+                            <constraint firstItem="nTA-q2-aYL" firstAttribute="top" secondItem="Prf-fu-Fcq" secondAttribute="bottom" constant="8" id="Ou9-C7-Rl6"/>
+                            <constraint firstItem="nTA-q2-aYL" firstAttribute="trailing" secondItem="xgt-eC-njW" secondAttribute="trailingMargin" id="R77-zG-YD7"/>
                             <constraint firstAttribute="centerX" secondItem="2TJ-0t-Y30" secondAttribute="centerX" id="WQD-A5-du1"/>
+                            <constraint firstItem="nTA-q2-aYL" firstAttribute="leading" secondItem="xgt-eC-njW" secondAttribute="leadingMargin" constant="5" id="Zh8-Om-JAA"/>
                             <constraint firstItem="nTA-q2-aYL" firstAttribute="top" secondItem="Prf-fu-Fcq" secondAttribute="bottom" constant="8" id="cHP-TV-c9N"/>
-                            <constraint firstAttribute="centerX" secondItem="MbK-Y7-wLd" secondAttribute="centerX" id="d20-1Z-OM4"/>
-                            <constraint firstAttribute="centerY" secondItem="MbK-Y7-wLd" secondAttribute="centerY" id="gjA-AT-Vv1"/>
                             <constraint firstAttribute="centerY" secondItem="2TJ-0t-Y30" secondAttribute="centerY" id="ryD-dD-yLA"/>
-                            <constraint firstAttribute="centerX" secondItem="nTA-q2-aYL" secondAttribute="centerX" id="sNk-LI-Nct"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -258,7 +264,6 @@
                                             <segue destination="Of4-O8-BIb" kind="show" id="hhV-ED-3LK"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Item" id="9sk-GT-Ctm"/>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ggg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-Da-vex">
@@ -358,7 +363,7 @@
         <image name="ggg.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9tz-3z-ZY2"/>
         <segue reference="dgq-JX-UaD"/>
+        <segue reference="lWe-wg-wlU"/>
     </inferredMetricsTieBreakers>
 </document>
