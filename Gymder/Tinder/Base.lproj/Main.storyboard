@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,13 +21,16 @@
                                 <rect key="frame" x="-20" y="0.0" width="350" height="568"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gymder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Le-VS-DYf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gymder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Le-VS-DYf">
                                 <rect key="frame" x="99" y="64" width="122" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="JpU-aI-pUd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-qo-ziQ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-qo-ziQ">
                                 <rect key="frame" x="16" y="433" width="289" height="53"/>
                                 <state key="normal" title="Button" image="Button-login-with-facebook.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,11 +45,25 @@
                                 <color key="textColor" red="1" green="0.063627737300000001" blue="0.01248519729" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="0.063627737300000001" blue="0.01248519729" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ggg.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsZ-IU-Uxr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ggg.png" translatesAutoresizingMaskIntoConstraints="NO" id="LsZ-IU-Uxr">
                                 <rect key="frame" x="15" y="36" width="284" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8eQ-Ls-bkC"/>
+                                    <constraint firstAttribute="width" constant="284" id="wdg-or-Pg7"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="cn4-qo-ziQ" secondAttribute="centerX" id="2M7-rf-kLv"/>
+                            <constraint firstItem="LsZ-IU-Uxr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="16" id="Izw-Yy-E6C"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cn4-qo-ziQ" secondAttribute="bottom" constant="82" id="LAf-Be-OGz"/>
+                            <constraint firstAttribute="centerX" secondItem="9Le-VS-DYf" secondAttribute="centerX" id="M46-Av-0ax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cn4-qo-ziQ" secondAttribute="trailing" constant="-1" id="hm2-cm-bhR"/>
+                            <constraint firstAttribute="centerX" secondItem="LsZ-IU-Uxr" secondAttribute="centerX" id="hnh-Zz-OBD"/>
+                            <constraint firstItem="9Le-VS-DYf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="44" id="pDa-UU-LJF"/>
+                            <constraint firstItem="cn4-qo-ziQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="tiq-g9-hWA"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -70,22 +88,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-lu-RkV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-lu-RkV">
                                 <rect key="frame" x="0.0" y="92" width="320" height="304"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2n-tR-gxt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edit Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2n-tR-gxt">
                                 <rect key="frame" x="67" y="47" width="186" height="37"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="24"/>
                                 <color key="textColor" red="0.19215688109397888" green="0.043137256056070328" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFD-Ng-8oZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFD-Ng-8oZ">
                                 <rect key="frame" x="110" y="402" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1b-FE-dib">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1b-FE-dib">
                                 <rect key="frame" x="110" y="525" width="100" height="30"/>
                                 <state key="normal" title="Save Changes">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,7 +113,7 @@
                                     <segue destination="Dc2-sd-ltY" kind="show" id="B3z-ak-yMk"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSg-g5-VZh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSg-g5-VZh">
                                 <rect key="frame" x="16" y="431" width="288" height="102"/>
                                 <color key="backgroundColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                 <color key="tintColor" red="0.19215688110000001" green="0.043137256059999997" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
@@ -104,6 +122,16 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="C1b-FE-dib" secondAttribute="centerX" id="0sf-Ix-FQN"/>
+                            <constraint firstItem="38Y-nM-3ax" firstAttribute="top" secondItem="kSg-g5-VZh" secondAttribute="bottom" constant="35" id="1xt-sR-1zs"/>
+                            <constraint firstItem="38Y-nM-3ax" firstAttribute="top" secondItem="C1b-FE-dib" secondAttribute="bottom" constant="13" id="2WD-Er-ibU"/>
+                            <constraint firstItem="c2n-tR-gxt" firstAttribute="top" secondItem="Lqk-Zu-952" secondAttribute="bottom" constant="27" id="KVu-GC-asb"/>
+                            <constraint firstItem="gFD-Ng-8oZ" firstAttribute="top" secondItem="j4d-lu-RkV" secondAttribute="bottom" constant="6" id="anH-7k-Mfc"/>
+                            <constraint firstAttribute="centerX" secondItem="c2n-tR-gxt" secondAttribute="centerX" id="evi-F2-2Y7"/>
+                            <constraint firstAttribute="centerX" secondItem="gFD-Ng-8oZ" secondAttribute="centerX" id="yjK-xd-q2q"/>
+                            <constraint firstItem="j4d-lu-RkV" firstAttribute="top" secondItem="c2n-tR-gxt" secondAttribute="bottom" constant="8" id="zkF-V8-FsH"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -113,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2z-wU-JLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="343"/>
+            <point key="canvasLocation" x="807" y="343"/>
         </scene>
         <!--Title-->
         <scene sceneID="cu9-mW-04W">
@@ -134,7 +162,7 @@
                                 <rect key="frame" x="0.0" y="72" width="320" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <navigationBar alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q22-JY-JRI">
+                            <navigationBar alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q22-JY-JRI">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="Flh-Ip-X9E">
@@ -165,6 +193,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q22-JY-JRI" firstAttribute="top" secondItem="3Aj-az-uTn" secondAttribute="bottom" constant="8" id="KSJ-2R-NfK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q22-JY-JRI" secondAttribute="trailing" constant="-16" id="dQF-Aq-8cY"/>
+                            <constraint firstItem="Q22-JY-JRI" firstAttribute="leading" secondItem="kEA-tH-YN3" secondAttribute="leadingMargin" constant="-16" id="dwW-k1-9Ib"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="bXH-vf-6xC"/>
@@ -194,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <navigationBar alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1C-Op-kfM">
+                            <navigationBar alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1C-Op-kfM">
                                 <rect key="frame" x="-5" y="28" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="jfS-6Y-UIl">
@@ -228,6 +261,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="r1C-Op-kfM" secondAttribute="trailing" constant="-11" id="ZPd-NC-gW6"/>
+                            <constraint firstItem="r1C-Op-kfM" firstAttribute="top" secondItem="qxq-Ag-m3T" secondAttribute="bottom" constant="8" id="e3E-0g-pmR"/>
+                            <constraint firstItem="r1C-Op-kfM" firstAttribute="leading" secondItem="CMf-pP-a4t" secondAttribute="leadingMargin" constant="-21" id="kdD-04-Pmm"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -244,7 +282,7 @@
         <image name="ggg.png" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dgq-JX-UaD"/>
-        <segue reference="B3z-ak-yMk"/>
+        <segue reference="9tz-3z-ZY2"/>
+        <segue reference="tRD-ni-eFh"/>
     </inferredMetricsTieBreakers>
 </document>
