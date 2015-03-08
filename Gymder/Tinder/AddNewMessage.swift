@@ -27,6 +27,9 @@ class AddNewMessage: UIViewController {
         
         NSUserDefaults.standardUserDefaults().setObject(messageBoard, forKey: "messageBoard")
         //updates NSUserDefaults every time a new entry is added.
+        
+        println(messageBoard)
+        
         self.performSegueWithIdentifier("addNewItem", sender: self)
         
     }

@@ -232,6 +232,11 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dc2-sd-ltY" id="4ht-48-Rhs"/>
+                                    <outlet property="delegate" destination="Dc2-sd-ltY" id="DKy-Zy-huK"/>
+                                </connections>
                             </tableView>
                             <navigationBar alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q22-JY-JRI">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
@@ -369,6 +374,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dgq-JX-UaD"/>
-        <segue reference="A7p-Cf-0hu"/>
+        <segue reference="9tz-3z-ZY2"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -71,7 +71,7 @@ class SignUpPage: UIViewController {
             
         self.bioField.text = user["bio"] as NSString
             
-        }
+        } 
         
     }
 
