@@ -12,21 +12,32 @@ var messageBoard = [String]()
 
 class MessageBoard: UIViewController, UITableViewDelegate {
     
+    var users = [""]
     
     @IBOutlet weak var tableViewMessageBoard: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    var query = PFUser.query()
         
-        if NSUserDefaults.standardUserDefaults().objectForKey("messageBoard") != nil {
-            //to check if we have any data stored in the app already, if not we will have an error.
+        query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
             
-            messageBoard = NSUserDefaults.standardUserDefaults().objectForKey("messageBoard") as [String] //any data put into app will be saved and shown again each time the app loads.
-            
+            self.users.removeAll(keepCapacity: true)
+         
+            for object in objects {
+                
+                var user:PFUser = object as PFUser
+                
+                self.users.append(user.latest)
+                
+                println("User is " + user.latest)
+                
+                
+            }
         }
         
-    }
+    )}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

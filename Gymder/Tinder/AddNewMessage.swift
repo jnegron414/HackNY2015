@@ -17,20 +17,15 @@ class AddNewMessage: UIViewController {
         
         var user = PFUser.currentUser()
         
-        user["Latest_entry"] = textView.text
+        user["latest"] = textView.text
         
-        var latest: NSString = user["Latest_entry"] as NSString
+        var latest: NSString = user["latest"] as NSString
         
         user.save()
         
         messageBoard.append(latest) //adds user entry into array
         
         textView.text = "" //resets textField
-        
-        NSUserDefaults.standardUserDefaults().setObject(messageBoard, forKey: "messageBoard")
-        //updates NSUserDefaults every time a new entry is added.
-        
-        println(messageBoard)
         
         self.performSegueWithIdentifier("addNewItem", sender: self)
         
