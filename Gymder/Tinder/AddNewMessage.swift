@@ -19,9 +19,11 @@ class AddNewMessage: UIViewController {
         
         user["Latest_entry"] = textView.text
         
+        var latest: NSString = user["Latest_entry"] as NSString
+        
         user.save()
         
-        messageBoard.append(textView.text) //adds user entry into array
+        messageBoard.append(latest) //adds user entry into array
         
         textView.text = "" //resets textField
         
