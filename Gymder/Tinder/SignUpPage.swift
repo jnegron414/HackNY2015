@@ -80,4 +80,19 @@ class SignUpPage: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    func textViewShouldReturn(textField: UITextField) -> Bool {
+        
+        bioField.resignFirstResponder()
+        
+        return true
+        
+    }
+
+    
 }

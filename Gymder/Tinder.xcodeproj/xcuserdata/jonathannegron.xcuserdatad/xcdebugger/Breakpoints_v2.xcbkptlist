@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tinder/SignUpPage.swift"
-            timestampString = "447488409.441596"
+            timestampString = "447496339.773182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "SignUpPage"
             landmarkType = "3">
          </BreakpointContent>
