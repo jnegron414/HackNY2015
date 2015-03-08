@@ -31,10 +31,9 @@ class MessageBoard: UIViewController, UITableViewDelegate {
                 
                 self.users.append(user.latest)
                 
-                println("User is " + user.latest)
-                
                 
             }
+            
         }
         
     )}
