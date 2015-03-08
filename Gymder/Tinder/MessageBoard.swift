@@ -12,9 +12,12 @@ var messageBoard = [String]()
 
 class MessageBoard: UIViewController, UITableViewDelegate {
     
-    var users = [""]
+    
+    var messageBoard = [String]()
     
     @IBOutlet weak var tableViewMessageBoard: UITableView!
+    
+    var latest = PFObject(className: "latest")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +26,21 @@ class MessageBoard: UIViewController, UITableViewDelegate {
         
         query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
             
-            self.users.removeAll(keepCapacity: true)
+            self.messageBoard.removeAll(keepCapacity: true)
          
             for object in objects {
                 
                 var user:PFUser = object as PFUser
                 
-                self.users.append(user.latest)
+                let latestMessage = user["latest"] as String
+                
+                self.messageBoard.append(latestMessage)
+                
                 
                 
             }
+            
+            self.tableViewMessageBoard.reloadData()
             
         }
         
