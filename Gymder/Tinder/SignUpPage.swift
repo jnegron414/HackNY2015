@@ -62,8 +62,16 @@ class SignUpPage: UIViewController {
         
         })
         
+        if user.isNew {
+            
+            self.bioField.text = ""
+        }
+            
+        else{
+            
         self.bioField.text = user["bio"] as NSString
-        
+            
+        }
         
     }
 
