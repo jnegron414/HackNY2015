@@ -8,9 +8,10 @@
 
 import UIKit
 
-class MessageBoard: UIViewController, UITableViewDelegate {
+var messageBoard = [String]()
 
-    var messageBoard = [String]()
+class MessageBoard: UIViewController, UITableViewDelegate {
+    
     
     @IBOutlet weak var tableViewMessageBoard: UITableView!
     
@@ -31,16 +32,33 @@ class MessageBoard: UIViewController, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return messageBoard.count
         
     }
     
+    //method is called whenever a user trys to edit an item in the table
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            //if user atttempts to delete (swipe to the left) an item this runs
+            
+            messageBoard.removeAtIndex(indexPath.row) //removes the item from the array at the specified index
+            
+            NSUserDefaults.standardUserDefaults().setObject(messageBoard, forKey: "messageBoard") //updates both arrays the saved and present versions
+            
+            tableViewMessageBoard.reloadData() //reloads table
+            
+        }
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell") //using our prototype cell as the placeholder for user entry
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+           //using our prototype cell as the placeholder for user entry
         
         cell.textLabel?.text = messageBoard[indexPath.row] //the text in the "cell" is based off the item in the array for that row
         
@@ -48,6 +66,13 @@ class MessageBoard: UIViewController, UITableViewDelegate {
         
     }
     
+    //function to reset text Field when return is pressed
+    override func viewDidAppear(animated: Bool) {
+        
+        tableViewMessageBoard.reloadData()
+        
+    }
     
     
 }
+

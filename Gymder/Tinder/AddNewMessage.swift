@@ -10,6 +10,27 @@ import UIKit
 
 class AddNewMessage: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
+    
+    @IBAction func addItem(sender: AnyObject) {
+        
+        var user = PFUser.currentUser()
+        
+        user["Latest_entry"] = textView.text
+        
+        user.save()
+        
+        messageBoard.append(textView.text) //adds user entry into array
+        
+        textView.text = "" //resets textField
+        
+        NSUserDefaults.standardUserDefaults().setObject(messageBoard, forKey: "messageBoard")
+        //updates NSUserDefaults every time a new entry is added.
+        self.performSegueWithIdentifier("addNewItem", sender: self)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

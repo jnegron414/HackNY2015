@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="807" y="343"/>
         </scene>
-        <!--View Controller-->
+        <!--Add New Message-->
         <scene sceneID="RNV-WE-UMv">
             <objects>
-                <viewController id="Of4-O8-BIb" sceneMemberID="viewController">
+                <viewController id="Of4-O8-BIb" customClass="AddNewMessage" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Prf-fu-Fcq"/>
                         <viewControllerLayoutGuide type="bottom" id="ewR-8x-YxM"/>
@@ -171,7 +171,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dc2-sd-ltY" kind="show" id="lWe-wg-wlU"/>
+                                    <action selector="addItem:" destination="Of4-O8-BIb" eventType="touchUpInside" id="fjO-ue-zFr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter your message below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTA-q2-aYL">
@@ -193,13 +193,18 @@
                             <constraint firstItem="nTA-q2-aYL" firstAttribute="leading" secondItem="xgt-eC-njW" secondAttribute="leadingMargin" constant="5" id="Zh8-Om-JAA"/>
                             <constraint firstItem="nTA-q2-aYL" firstAttribute="top" secondItem="Prf-fu-Fcq" secondAttribute="bottom" constant="8" id="cHP-TV-c9N"/>
                             <constraint firstAttribute="centerY" secondItem="2TJ-0t-Y30" secondAttribute="centerY" id="ryD-dD-yLA"/>
+                            <constraint firstItem="MbK-Y7-wLd" firstAttribute="top" secondItem="nTA-q2-aYL" secondAttribute="bottom" constant="61" id="wV3-FC-J59"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="textView" destination="MbK-Y7-wLd" id="ekB-qZ-IAv"/>
+                        <segue destination="Dc2-sd-ltY" kind="show" identifier="addNewItem" id="A7p-Cf-0hu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJQ-oO-ZO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="1032"/>
+            <point key="canvasLocation" x="441" y="1038"/>
         </scene>
         <!--Title-->
         <scene sceneID="cu9-mW-04W">
@@ -364,6 +369,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dgq-JX-UaD"/>
-        <segue reference="lWe-wg-wlU"/>
+        <segue reference="A7p-Cf-0hu"/>
     </inferredMetricsTieBreakers>
 </document>
