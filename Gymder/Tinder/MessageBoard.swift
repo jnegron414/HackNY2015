@@ -20,6 +20,9 @@ class MessageBoard: UIViewController, UITableViewDelegate {
     
     var latest = PFObject(className: "latest")
     
+    var usersName = PFObject(className: "name")
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,14 +43,17 @@ class MessageBoard: UIViewController, UITableViewDelegate {
                 
                 self.messageBoard.append(latestMessage)
                 
+                let usersName = user["name"] as String
+                
+                self.userNames.append(usersName)
+                
             }
             
             self.tableViewMessageBoard.reloadData()
             
-        }
-        
+        })
             
-    )}
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,27 +86,8 @@ class MessageBoard: UIViewController, UITableViewDelegate {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
            //using our prototype cell as the placeholder for user entry
-        
-        var query = PFUser.query()
-        
-        query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
-            
-            self.userNames.removeAll(keepCapacity: true)
-        
-        for object in objects {
-            
-            var user:PFUser = object as PFUser
-            
-            let usersName = user["name"] as String
-            
-            self.userNames.append(usersName)
-            
-            }
-        
-            
-            })
-            
-        cell.textLabel?.text = messageBoard[indexPath.row] //the text in the "cell" is based off the item in the array for that row
+    
+        cell.textLabel?.text = userNames[indexPath.row] + ": " + messageBoard[indexPath.row] //the text in the "cell" is based off the item in the array for that row
         
         return cell
         
